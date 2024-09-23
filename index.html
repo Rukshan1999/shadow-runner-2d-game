@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2D Game App</title>
+  <script type="module" src="./main.js"></script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="overlay">
+  <h1>Loading Game Assets</h1>
+  <div id="progress-bar">
+    <div id="bar"></div>
+  </div>
+</div>
+<div id="character"></div>
+
+<div id="platform">
+  <div id="tile1"></div>
+  <div id="tile2"></div>
+  <div id="tile3"></div>
+</div>
+<div id="enemy"></div> <!-- New element for the enemy -->
+<div id="score">0</div> <!-- Score display -->
+<!--Game Over Screen-->
+<div id="game-over" class="hide">
+  <audio id="game-over-sound" src="/music/game-over.mp3"></audio>
+  <h1>Game Over</h1>
+  <p>Score: <span id="final-score">0</span></p>
+  <button id="restart">Restart</button>
+  <button id="exit">Exit</button>
+</div>
+<!--Start Screen-->
+<div id="start-screen">
+  <h2>Welcome to <br><span>Shadow Runner</span><br>2D Game</h2>
+  <button type="button">PLAY</button>
+  <div id="footer">Copyright &copy; Tharindu Rukshan 2024 DEP-12. All Rights Reserved.</div>
+</div>
+
+<!--Background Music-->
+<audio id="bg-music" src="/music/tone.mp3" loop></audio>
+<div id="music-controls">
+  <img id="music-icon" src="/image/icon/music.png" alt="Music Icon">
+  <input type="range" id="volume-control" min="0" max="1" step="0.01" value="0.5" />
+</div>
+</body>
+</html>
